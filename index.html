@@ -1,16 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- Redirecionamento ultra rápido em HTML (0 segundos) -->
-    <meta http-equiv="refresh" content="0; url=https://online-chat.living">
-    <title>Redirecting...</title>
+    <title>Oferta Especial</title>
+    
+    <!-- Configurações do Open Graph (Redes Sociais como Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Instabang">
+    <meta property="og:description" content="Free Access">
+    
+    <!-- Imagem estática para o card -->
+    <meta property="og:image" content="https://online-chat.living/card.jpg"> 
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Configurações de Card para o Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instabang">
+    <meta name="twitter:description" content="Free Access">
+    <meta name="twitter:image" content="https://online-chat.living/card.jpg">
+
+    <script type="text/javascript">
+        // URL padrão caso o idioma não corresponda a nenhum dos mapeados abaixo
+        const urlPadrao = "https://t.mbjms.com/204777/3785/0?target=domainredirects&po=6456&aff_sub5=SF_006OG000004lmDN";
+
+        // Mapeamento de URLs baseado nas variações de idioma/país do navegador
+        const urlsPorIdioma = {
+            // Austrália
+            "en-AU": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            
+            // Canadá (Inglês e Francês canadense)
+            "en-CA": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            "fr-CA": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            
+            // Dinamarca
+            "da": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            "da-DK": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            
+            // Irlanda
+            "en-IE": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            "ga-IE": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN", // Irlandês nativo
+            
+            // Nova Zelândia
+            "en-NZ": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            
+            // Noruega
+            "no": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            "nb": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN", // Bokmål norueguês
+            "nn": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN", // Nynorsk norueguês
+            
+            // Reino Unido
+            "en-GB": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN",
+            
+            // Estados Unidos
+            "en-US": "https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN"
+        };
+
+        // Captura o idioma principal do navegador (ex: "en-US", "da", "pt-BR")
+        const idiomaNavegador = navigator.language || navigator.userLanguage;
+
+        // Tenta redirecionar pelo código exato (ex: "en-US")
+        if (urlsPorIdioma[idiomaNavegador]) {
+            window.location.href = urlsPorIdioma[idiomaNavegador];
+        } else {
+            // Se não achar o exato, tenta pegar apenas as duas primeiras letras (ex: se for "da-CH", vira "da")
+            const idiomaCurto = idiomaNavegador.split('-')[0];
+            
+            if (urlsPorIdioma[idiomaCurto]) {
+                window.location.href = urlsPorIdioma[idiomaCurto];
+            } else if (idiomaCurto === 'en') {
+                // Tratamento especial: Se o navegador for em inglês genérico ("en"), direciona para os EUA por padrão
+                window.location.href = urlsPorIdioma["en-US"];
+            } else {
+                // Caso não seja nenhum dos idiomas listados, usa o link padrão
+                window.location.href = urlPadrao;
+            }
+        }
+    </script>
 </head>
 <body>
-    <!-- Fallback em JavaScript caso o navegador bloqueie o Meta Refresh -->
-    <script type="text/javascript">
-        window.location.href = "https://online-chat.living";
-    </script>
-    <p>If you are not redirected, <a href="https://online-chat.living">click here</a>.</p>
+    <p>If you are not redirected, <a href="https://t.crdtg2.com/204777/10259/0?aff_sub5=SF_006OG000004lmDN">click here</a>.</p>
 </body>
 </html>
